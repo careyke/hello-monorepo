@@ -1,0 +1,31 @@
+{
+  "name": "@carey/react-base-components",
+  "version": "0.1.0",
+  "description": "react base components",
+  "author": "hermanke <hermanke@tencent.com>",
+  "homepage": "https://github.com/careyke/hello-monorepo/tree/main/packages/react-base-components#readme",
+  "license": "ISC",
+  "main": "index.ts",
+  "files": [
+    "src",
+    "index.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/careyke/hello-monorepo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@types/classnames": "^2.3.1",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.7",
+    "classnames": "^2.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "bugs": {
+    "url": "https://github.com/careyke/hello-monorepo/issues"
+  }
+}

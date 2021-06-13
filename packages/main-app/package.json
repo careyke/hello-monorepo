@@ -1,0 +1,28 @@
+{
+  "name": "@carey/main-app",
+  "version": "0.1.0",
+  "description": "main-app",
+  "author": "hermanke <hermanke@tencent.com>",
+  "homepage": "https://github.com/careyke/hello-monorepo/tree/main/packages/main-app#readme",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/careyke/hello-monorepo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@carey/react-base-components": "0.1.0",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "webpack-merge": "^5.8.0"
+  },
+  "bugs": {
+    "url": "https://github.com/careyke/hello-monorepo/issues"
+  }
+}

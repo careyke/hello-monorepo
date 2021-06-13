@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "jsx": "react",
+    "isolatedModules": true,
+    "strict": true,
+    "outDir": "./build",
+    "baseUrl": "./",
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "packages/*/src",
+    "packages/*/index.ts",
+    "global.d.ts",
+    "polyfill.d.ts"
+  ]
+}
