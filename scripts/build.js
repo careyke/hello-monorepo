@@ -15,7 +15,7 @@ const {
   measureFileSizesBeforeBuild,
   printFileSizesAfterBuild,
 } = require("react-dev-utils/FileSizeReporter");
-const formatWebpackMessages = require("react-dev-utils/formatWebpackMessages");
+const formatWebpackMessages = require("./formatWebpackMessages");
 const printBuildError = require("react-dev-utils/printBuildError");
 
 const { WEBPACK_BUILD_FILE_PATH } = require("./constants.js");
@@ -76,7 +76,7 @@ const build = (previousFileSizes) => {
 
     if (messages.warnings.length) {
       console.log(chalk.yellow("Compiled with warnings.\n"));
-      console.log(warnings.join("\n\n"));
+      console.log(messages.warnings.join("\n\n"));
     } else {
       console.log(chalk.green("Compiled successfully.\n"));
     }
@@ -88,7 +88,6 @@ const build = (previousFileSizes) => {
       WARN_AFTER_BUNDLE_GZIP_SIZE,
       WARN_AFTER_CHUNK_GZIP_SIZE
     );
-    process.exit(0);
   });
 };
 

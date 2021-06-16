@@ -15,7 +15,7 @@ const cssName = isDev ? "css/[name].css" : "css/[name]_[contenthash:8].css";
 const cssClassName = "[name]_[local]_[contenthash:4]";
 
 const PACKAGE_PATH = path.resolve(__dirname, "../packages");
-// const NODE_MODULE_PATH = path.resolve(__dirname, "../node_modules");
+const NODE_MODULE_PATH = path.resolve(__dirname, "../node_modules");
 const TEMPLATE_PATH = path.join(__dirname, "../template");
 
 module.exports = (packagePath) => {
@@ -82,6 +82,28 @@ module.exports = (packagePath) => {
             },
             "postcss-loader",
             "less-loader",
+          ],
+        },
+        {
+          // 处理antd的样式文件，不能使用css module
+          test: /\.(less|css)$/,
+          include: NODE_MODULE_PATH,
+          use: [
+            MiniCssExtractPlugin.loader,
+            {
+              loader: "css-loader",
+              options: {
+                modules: false,
+              },
+            },
+            {
+              loader: "less-loader",
+              options: {
+                lessOptions: {
+                  javascriptEnabled: true,
+                },
+              },
+            },
           ],
         },
         {

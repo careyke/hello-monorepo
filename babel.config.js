@@ -9,6 +9,7 @@ module.exports = {
     "@babel/typescript",
   ],
   plugins: [
+    "react-hot-loader/babel",
     ["import", { libraryName: "antd", style: true }],
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-transform-runtime",
