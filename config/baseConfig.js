@@ -70,7 +70,7 @@ module.exports = (packagePath) => {
           test: /\.(less|css)$/,
           include: [SRC_PATH, PACKAGE_PATH],
           use: [
-            MiniCssExtractPlugin.loader,
+            isDev ? "style-loader" : MiniCssExtractPlugin.loader,
             {
               loader: "css-loader",
               options: {
